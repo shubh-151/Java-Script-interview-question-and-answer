@@ -10,3 +10,4 @@ class ToyotaCar{
 //To create a object for toyota car
 
 let fortuner = new ToyotaCar();
+let lexus = new ToyotaCar();

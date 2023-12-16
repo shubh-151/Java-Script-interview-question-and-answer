@@ -53,30 +53,33 @@ callback hell:- nested callback stacked below one function forming a pyramid str
 
 /*=====================Promise Chaining=============================*/
 
-function asyncfunc1() {
+function asyncfunc1(getData) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log("data1");
+      console.log("data1",getData);
       resolve("success");
     }, 4000);
   });
 }
 
-function asyncfunc2() {
-  new Promise((resolve, reject) => {
+
+function asyncfunc2(getData) {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log("data2");
-      resolve("sucess");
+      console.log("data2",getData);
+      resolve("success");
     }, 4000);
   });
 }
 
-asyncfunc1()
-  .then((res) => {
-    return asyncfunc2();
-  })
-  .then((res) => {
-    console.log(res);
+
+
+asyncfunc1(1)
+.then((res) => {
+    asyncfunc2(2)
+    .then((res)=>{
+        console.log(res)
+    });
   });
  
 

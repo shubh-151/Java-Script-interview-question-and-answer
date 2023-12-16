@@ -76,6 +76,7 @@ function asyncfunc2(getData) {
 
 asyncfunc1(1)
 .then((res) => {
+    console.log(res)
     asyncfunc2(2)
     .then((res)=>{
         console.log(res)

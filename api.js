@@ -22,14 +22,36 @@ callback hell:- nested callback stacked below one function forming a pyramid str
 
 */
 
-/*---------------------------Promise---------------------------------------*/
+/*---------------------------Promise-------------------------*/
 
 
-let promise = new Promise((res, rej)=>{
-console.log("resolve");
-reject()
+// let promise = new Promise((res, rej)=>{
+// console.log("resolve");
+// reject()
+// })
 
-})
+
+/*---------------------Promise Using .then() & .catch()------------------*/
+
+// const getPromise = () =>{
+//     return new Promise((resolve, reject) =>{
+//         console.log("I am a promise");
+//         resolve(" promise success");
+//     });
+// };
+// let promise = getPromise();
+
+
+// promise.then((res)=>{
+//     console.log("success", res);
+// });
+
+// promise.catch((err) =>{
+//     console.log("rejected", err)
+// });
+
+
+
 
 
 

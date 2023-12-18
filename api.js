@@ -57,3 +57,20 @@ callback hell:- nested callback stacked below one function forming a pyramid str
 
 /*=========================Async & Await =========================*/
 
+function getData(dataId) {
+    return new Promise((res,rej) =>{
+        setTimeout(()=>{
+            console.log("success")
+            res("sucess");
+        },2000)
+    })     
+}
+
+async function getAllData() {
+    await getData(1);
+    await getData(2);
+    await getData(3);
+    await getData(4);
+    await getData(5);
+    await getData(6);   
+}

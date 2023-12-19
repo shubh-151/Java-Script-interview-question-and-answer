@@ -6,7 +6,8 @@ const btn = document.querySelector("#HitMe");
 const getData = async()=>{
     let res = await fetch(URL);
     let data = await res.json();
-    catFact.innerText = data[1].text;
+    console.log(data)
+    catFact.innerText = data[6].text;
 
 }
 btn.addEventListener("click", getData);

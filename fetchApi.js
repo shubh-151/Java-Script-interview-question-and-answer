@@ -7,7 +7,7 @@ const getData = async()=>{
     let res = await fetch(URL);
     let data = await res.json();
     console.log(data)
-    catFact.innerText = data[6].text;
+    catFact.innerText = data[4].text;
 
 }
 btn.addEventListener("click", getData);
